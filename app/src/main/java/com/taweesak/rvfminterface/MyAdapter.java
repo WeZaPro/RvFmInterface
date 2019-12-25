@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +39,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.VH>{
 
         holder._country.setText(mDataList.get(position).getCountry());
         holder._rates.setText(""+mDataList.get(position).getRates());
+        holder._imageFlag.setImageResource(mDataList.get(position).getImages());
         holder.itemView.setTag(position);
     }
 
@@ -51,12 +53,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.VH>{
 
         TextView _country;
         TextView _rates;
+        ImageView _imageFlag;
 
         public VH(View itemView) {
             super(itemView);
 
             _country = itemView.findViewById(R.id.tv_country);
             _rates = itemView.findViewById(R.id.tv_rate);
+            _imageFlag = itemView.findViewById(R.id.imageFlag);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

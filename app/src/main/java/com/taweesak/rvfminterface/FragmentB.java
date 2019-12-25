@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class FragmentB extends Fragment {
@@ -18,12 +19,19 @@ public class FragmentB extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_b, container, false);
-        TextView textView = v.findViewById(R.id.textView);
+
+        TextView tvCountry = v.findViewById(R.id.tvCountry);
+        TextView tvRates = v.findViewById(R.id.tvRates);
+        ImageView imageView = v.findViewById(R.id.imageView);
+
         MyModel myModel = new MyModel();
 
         if(getArguments() != null){
             myModel = getArguments().getParcelable("key");
-            textView.setText(""+myModel.getCountry());
+
+            tvCountry.setText("country : "+myModel.getCountry());
+            tvRates.setText("rates : "+myModel.getRates());
+            imageView.setImageResource(myModel.getImages());
         }
 
         return v;

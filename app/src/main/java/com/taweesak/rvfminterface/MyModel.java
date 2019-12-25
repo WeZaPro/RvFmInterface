@@ -7,13 +7,15 @@ public class MyModel implements Parcelable {
 
     private String country;
     private double rates;
+    private int images;
 
     public MyModel() {
     }
 
-    public MyModel(String country, double rates) {
+    public MyModel(String country, double rates,int images) {
         this.country = country;
         this.rates = rates;
+        this.images = images;
     }
 
     protected MyModel(Parcel in) {
@@ -47,6 +49,14 @@ public class MyModel implements Parcelable {
 
     public void setRates(double rates) {
         this.rates = rates;
+    }
+
+    public int getImages() {
+        return images;
+    }
+
+    public void setImages(int images) {
+        this.images = images;
     }
 
     @Override

@@ -5,13 +5,28 @@
     android:layout_height="match_parent"
     android:background="#F2F8B0"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".FragmentB">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvCountry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="fragment b"
+        android:text="Country"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tvRates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rates"
         android:textSize="25sp" />
 
 </LinearLayout>

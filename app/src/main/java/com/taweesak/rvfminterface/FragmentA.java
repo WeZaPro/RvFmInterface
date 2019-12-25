@@ -22,7 +22,7 @@ public class FragmentA extends Fragment {
 
     private ArrayList<MyModel> lstData = new ArrayList<>();
     RecyclerView recyclerView;
-    Button button;
+    //Button button;
     MyAdapter myAdapter;
     Context context;
     MyInterface listener;
@@ -42,7 +42,7 @@ public class FragmentA extends Fragment {
         if(v == null){ // แก้ไขเรื่อง Dupplicate item in Recyclerview
 
             v = inflater.inflate(R.layout.fragment_a, container, false);
-            button = v.findViewById(R.id.button);
+            //button = v.findViewById(R.id.button);
             recyclerView = v.findViewById(R.id.myRecyclerView);
 
             data();
@@ -51,29 +51,28 @@ public class FragmentA extends Fragment {
             myAdapter = new MyAdapter(lstData,listener,getActivity());
             recyclerView.setAdapter(myAdapter);
         }
-        
+
         Log.i("check","onCreateView");
 
         return v;
     }
 
     private void data() {
-        String country_[] = {"Kitty 1 |","Kitty 2 |","Kitty 3 |",
-                "Kitty 4 |","Kitty 5 |","Kitty 6 |","Kitty 7 |",
-                "Kitty 8 |","Kitty 9 |","Kitty 10 |","Kitty 11 |",
-                "Kitty 12 |","Kitty 13 |","Kitty 14 |","Kitty 15 |"};
-        double rates[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+        String country_[] = {"brazil","ghana","island","japan","polynesia","southkorea",
+        "spain","uk","usa"};
+        double rates_[] = {10.51,20.52,30.53,40.54,50.55,60.56,70.57,80.58,90.59};
+        int image_[] = {R.drawable.brazil,R.drawable.ghana,R.drawable.island
+                ,R.drawable.japan,R.drawable.polynesia,R.drawable.southkorea
+                ,R.drawable.spain,R.drawable.unitedkingdom,R.drawable.usa};
 
 
         int dataSize = country_.length;
 
         for (int i = 0; i <dataSize ; i++) {
-            MyModel model = new MyModel(country_[i],rates[i]);
+            MyModel model = new MyModel(country_[i],rates_[i],image_[i]);
             lstData.add(model);
         }
     }
-
-
 
     @Override
     public void onAttachFragment(Fragment childFragment) {
