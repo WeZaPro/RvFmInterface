@@ -8,25 +8,71 @@
     android:orientation="vertical"
     tools:context=".FragmentB">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:src="@mipmap/ic_launcher"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        />
-
-    <TextView
-        android:id="@+id/tvCountry"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Country"
-        android:textSize="25sp" />
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvRates"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tvCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Country"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tvRates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Rates"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rates"
-        android:textSize="25sp" />
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="input value"
+            android:textSize="25sp"
+            android:paddingBottom="25dp"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="calculate" />
+
+        <TextView
+            android:id="@+id/tvCalRates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="25dp"
+            android:text="CalRates"
+            android:textSize="25sp" />
+
+
+    </LinearLayout>
+
 
 </LinearLayout>
