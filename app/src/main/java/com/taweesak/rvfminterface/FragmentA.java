@@ -69,7 +69,7 @@ public class FragmentA extends Fragment {
         int dataSize = country_.length;
 
         for (int i = 0; i <dataSize ; i++) {
-            MyModel model = new MyModel(country_[i],rates_[i],image_[i]);
+            MyModel model = new MyModel(rates_[i],country_[i],image_[i]);
             lstData.add(model);
         }
     }

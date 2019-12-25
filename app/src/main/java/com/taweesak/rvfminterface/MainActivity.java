@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements MyInterface{
         FragmentA fragmentA = new FragmentA();
         FragmentB fragmentB = new FragmentB();
 
-        if(savedInstanceState == null){
+        if(savedInstanceState == null){//แก้ไขเรื่อง Fragment ซ้อนกัน
 
             getSupportFragmentManager()
                     .beginTransaction()
