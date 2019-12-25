@@ -19,14 +19,14 @@ public class MainActivity extends AppCompatActivity implements MyInterface{
             getSupportFragmentManager()
                     .beginTransaction()
                     .add(R.id.contentContainer_top,fragmentA)
-                    .addToBackStack("")
+                    //.addToBackStack("")
                     .commit();
 
-            getSupportFragmentManager()
+            /*getSupportFragmentManager()
                     .beginTransaction()
                     .add(R.id.contentContainer_bottom,fragmentB)
                     .addToBackStack("")
-                    .commit();
+                    .commit();*/
         }
     }
 
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements MyInterface{
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.contentContainer_bottom,fragmentB)
+                .replace(R.id.contentContainer_top,fragmentB)
                 .addToBackStack("")
                 .commit();
 

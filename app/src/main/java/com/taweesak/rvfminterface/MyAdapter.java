@@ -1,6 +1,7 @@
 package com.taweesak.rvfminterface;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,4 +83,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.VH>{
         super.onDetachedFromRecyclerView(recyclerView);
         listener = null;
     }
+
+
+
+
 }
